@@ -37,7 +37,10 @@ RUN \
     qbittorrent-nox=${QBITTORRENT_VERSION} \
     unrar \
     geoip-bin \
+    python3-pip \    
     unzip && \
+  pip install pyTelegramBotAPI && \
+  curl https://rclone.org/install.sh | bash &&\    
   echo "**** cleanup ****" && \
   apt-get clean && \
   rm -rf \
